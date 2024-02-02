@@ -3,6 +3,13 @@ pipeline {
     docker { image 'node:16-alpine' }
   }
   stages {
+ stage('Hello') {
+            steps {
+                // Print "Hello" in the console output
+                echo 'Hello, Jenkins!'
+            }
+        }
+
     stage('Test') {
       steps {
         sh 'node --version'
